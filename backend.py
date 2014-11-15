@@ -119,7 +119,6 @@ class MissSpell:
                     else:
                         new_word.append(letter)
             words[index] = ''.join(new_word)
-            words[index]
             count += 1
             for i in xrange(words):
                 offset = random.randint(0,4)
@@ -171,7 +170,7 @@ class MissSpell:
                     else:
                         new_word.append(letter)
             words[index] = ''.join(new_word)
-            words[index]
+            
             count += 1
             for i in xrange(words):
                 offset = random.randint(0,4)
