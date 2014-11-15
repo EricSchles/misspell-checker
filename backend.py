@@ -63,7 +63,10 @@ class MissSpell:
                     new_word.append(vowel_mapping[letter])
                 else:
                     if ind%3==0 or ind%4==1:
-                        new_word.append(consonants_mapping[letter])
+                        if letter in consonants_mapping.keys():
+                            new_word.append(consonants_mapping[letter])
+                        else:
+                            new_word.append(letter)
                     else:
                         new_word.append(letter)
             words[index] = ''.join(new_word)
@@ -115,7 +118,10 @@ class MissSpell:
                     new_word.append(vowel_mapping[letter])
                 else:
                     if ind%3==0 or ind%4==1:
-                        new_word.append(consonants_mapping[letter])
+                        if letter in consonants_mapping.keys():
+                            new_word.append(consonants_mapping[letter])
+                        else:
+                            new_word.append(letter)
                     else:
                         new_word.append(letter)
             words[index] = ''.join(new_word)
