@@ -130,8 +130,8 @@ class MissSpell:
                 offset = random.randint(0,4)
                 if offset+index < len(words): 
                     words[index+offset],words[index] = self.swap(words[index],words[index+offset])
-                elif offset+1 < len(words):
-                    words[index+1],words[index] = self.swap(words[index],words[index+1])
+                elif offset < len(words)-1 and index< len(words)-1:
+                    words[index],words[index+1] = self.swap(words[index],words[index+1])
                 else:
                     continue
         return ' '.join(words)
@@ -191,8 +191,8 @@ class MissSpell:
                 offset = random.randint(0,4)
                 if offset+index < len(words): 
                     words[index+offset],words[index] = self.swap(words[index],words[index+offset])
-                elif offset+1 < len(words):
-                    words[index+1],words[index] = self.swap(words[index],words[index+1])
+                elif offset < len(words)-1 and index< len(words)-1:
+                    words[index],words[index+1] = self.swap(words[index],words[index+1])
                 else:
                     continue
         return ' '.join(words)
