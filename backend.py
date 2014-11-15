@@ -72,7 +72,7 @@ class MissSpell:
             words[index] = ''.join(new_word)
             count += 1
 
-        return ''.join(words)
+        return ' '.join(words)
 
     def swap(self,first,second):
         return second,first
@@ -130,7 +130,7 @@ class MissSpell:
                 offset = random.randint(0,4)
                 words[index+offset],words[index] = self.swap(words[index],words[index+offset])
                 
-        return ''.join(words)
+        return ' '.join(words)
 
     def high_checker(self,text):
         words = text.split(' ')
@@ -187,6 +187,6 @@ class MissSpell:
                 offset = random.randint(0,4)
                 words[index+offset],words[index] = self.swap(words[index],words[index+offset])
                 
-        return ''.join(words)
+        return ' '.join(words)
 
         
