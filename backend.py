@@ -25,6 +25,12 @@ class MissSpell:
             print "You have some how gotten around setting a level, we cannot proceed without this"
             sys.exit(0)
     def low_checker(self,text):
-        
+        words = text.split(' ')
+        words_to_misspell = int(len(words)*(.01*self.percentage))
+        if words_to_misspell == 0: words_to_misspell = 1
+        count = 0
+        while count < words_to_misspell:
+            
+            
 
             
