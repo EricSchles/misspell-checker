@@ -28,7 +28,7 @@ class MissSpell:
 
     def low_checker(self,text):
         words = text.split(' ')
-        words_to_misspell = int(len(words)*(.01*self.percentage))
+        words_to_misspell = int(len(words)*(.1*self.percentage))
         if words_to_misspell == 0: words_to_misspell = 1
         count = 0
         indexes_used = []
@@ -80,7 +80,7 @@ class MissSpell:
 
     def medium_checker(self,text):
         words = text.split(' ')
-        words_to_misspell = int(len(words)*(.01*self.percentage))
+        words_to_misspell = int(len(words)*(.1*self.percentage))
         if words_to_misspell == 0: words_to_misspell = 1
         count = 0
         indexes_used = []
@@ -138,7 +138,7 @@ class MissSpell:
 
     def high_checker(self,text):
         words = text.split(' ')
-        words_to_misspell = int(len(words)*(.01*self.percentage))
+        words_to_misspell = int(len(words)*(.1*self.percentage))
         if words_to_misspell == 0: words_to_misspell = 1
         count = 0
         indexes_used = []
