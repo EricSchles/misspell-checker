@@ -156,7 +156,7 @@ class MissSpell:
                                  "x":"z",
                                  "b":"r",
                                  "k":"l",
-                                 "f":"g"
+                                 "f":"g",
                                  "m":"n",
                                  "v":"s"
                                  }
