@@ -169,6 +169,8 @@ class MissSpell:
                         new_word.append(consonants_mapping[letter])
                     else:
                         new_word.append(letter)
+            first,second = self.swap(new_word[:len(new_word)/2],new_word[len(new_word)/2:]) 
+            new_word = first + second
             words[index] = ''.join(new_word)
             
             count += 1
