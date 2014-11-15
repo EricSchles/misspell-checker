@@ -126,10 +126,14 @@ class MissSpell:
                         new_word.append(letter)
             words[index] = ''.join(new_word)
             count += 1
-            for i in xrange(words):
+            for i in xrange(len(words)):
                 offset = random.randint(0,4)
-                words[index+offset],words[index] = self.swap(words[index],words[index+offset])
-                
+                if offset+index < len(words): 
+                    words[index+offset],words[index] = self.swap(words[index],words[index+offset])
+                elif offset+1 < len(words):
+                    words[index+1],words[index] = self.swap(words[index],words[index+1])
+                else:
+                    continue
         return ' '.join(words)
 
     def high_checker(self,text):
@@ -183,10 +187,14 @@ class MissSpell:
             words[index] = ''.join(new_word)
             
             count += 1
-            for i in xrange(words):
+            for i in xrange(len(words)):
                 offset = random.randint(0,4)
-                words[index+offset],words[index] = self.swap(words[index],words[index+offset])
-                
+                if offset+index < len(words): 
+                    words[index+offset],words[index] = self.swap(words[index],words[index+offset])
+                elif offset+1 < len(words):
+                    words[index+1],words[index] = self.swap(words[index],words[index+1])
+                else:
+                    continue
         return ' '.join(words)
 
         
