@@ -17,11 +17,11 @@ class MissSpell:
 
     def checker(self,text):
         if self.level == "low":
-            self.low_checker(text)
+            return self.low_checker(text)
         elif self.level == "medium":
-            self.medium_checker(text)
+            return self.medium_checker(text)
         elif self.level == "high":
-            self.high_checker(text)
+            return self.high_checker(text)
         else:
             print "You have some how gotten around setting a level, we cannot proceed without this"
             sys.exit(0)
