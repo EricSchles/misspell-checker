@@ -6,8 +6,8 @@ Mis-spell-checker:
 import sys
 import random
 class MissSpell:
-    def __init__(self,level,percentage=4):
-        if percentage in range(4,7):
+    def __init__(self,level,percentage=40):
+        if percentage in xrange(40,70,10):
             self.percentage = percentage
         if level.lower() in ["low","medium","high"]:
             self.level = level.lower()
@@ -28,7 +28,8 @@ class MissSpell:
 
     def low_checker(self,text):
         words = text.split(' ')
-        words_to_misspell = int(len(words)*(.1*self.percentage))
+	print len(words) * (.01*self.percentage)
+        words_to_misspell = int(len(words)*(.01*self.percentage))
         if words_to_misspell == 0: words_to_misspell = 1
         count = 0
         indexes_used = []
